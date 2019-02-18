@@ -196,8 +196,8 @@ class SockJsClient extends React.Component {
     this.client.connect(this.props.headers, () => {
       this.setState({ connected: true })
       this.props.topics.forEach((topic) => {
-        if(_this.client.ws.readyState === 1){
-              _this._subscribe(topic);
+        if(this.client.ws.readyState === 1){
+              this._subscribe(topic);
         }
       })
       this.props.onConnect()
