@@ -9,7 +9,7 @@
     ]
   },
   "scripts": {
-    "prepack": "npm run build",
+    "prepare": "npm run build",
     "lint": "eslint src/* test/*",
     "lint-fix": "eslint src/* test/* --fix",
     "test": "npm run lint && mocha --require babel-core/register --require test/bootstrap.js --recursive test/unit --exit",
